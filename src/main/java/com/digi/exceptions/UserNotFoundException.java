@@ -1,4 +1,4 @@
-package com.digi.exceptions.user;
+package com.digi.exceptions;
 
 public class UserNotFoundException extends RuntimeException {
     private String message;

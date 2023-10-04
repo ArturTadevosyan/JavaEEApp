@@ -13,9 +13,10 @@ public class MyDatasource {
     public static Connection getConnection() {
         try {
             if (connection == null || connection.isClosed()) {
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 connection = DriverManager.getConnection(url, USERNAME, PASSWORD);
             }
-        } catch (SQLException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
         return connection;

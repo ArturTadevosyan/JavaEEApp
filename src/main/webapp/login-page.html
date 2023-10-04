@@ -1,17 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Home Page</title>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        input.submit {
+            width: 150px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 18px;
+            text-decoration: none;
+        }
+    </style>
+
 </head>
 <body>
-<h1>Home Page</h1>
+<h1>Login Page</h1>
 </br>
+<hr>
 </br>
-<form  method="" action="">
-  username:<input type="text" name="username"></br></br>
-  password:<input type="password" name="password"></br></br>
-  <input type="submit" name="submit">
-</form>
+<div style="width: 100% ;display: flex;justify-content: center;">
+    <form style="display: inline-block; text-align: center; width: 400px" method="GET" action="/login-page">
+        <p style="display: flex;justify-content: space-around">
+            <span style="width: 50px">Email:</span>
+            <input type="text" name="email">
+        </p>
+        <p style="display: flex;justify-content: space-around">
+            <span style="width: 50px">Password:</span>
+            <input type="password" name="password">
+        </p>
+        <br>
+        <input class="submit" type="submit" name="login" value="LOGIN">
+    </form>
+</div>
 </body>
 </html>
